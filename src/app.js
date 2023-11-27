@@ -4,14 +4,13 @@ import React, { useState, useEffect, lazy, Suspense } from 'react';
 import { IoPerson } from 'react-icons/io5';
 import { FaLaptop, FaBlog, FaLinux } from 'react-icons/fa';
 import { MdContactMail } from 'react-icons/md';
-import { FcLinux } from "react-icons/fc";
 
 // Channels
-const AboutMe = lazy(() => import('./channels/about'));
-const Blog = lazy(() => import('./channels/blog'));
-const Projects = lazy(() => import('./channels/projects'));
-const Neofetch = lazy(() => import('./channels/neofetch'));
-const Contact = lazy(() => import('./channels/contact'));
+const AboutMe = lazy(() => import('./components/channels/about'));
+const Blog = lazy(() => import('./components/channels/blog'));
+const Projects = lazy(() => import('./components/channels/projects'));
+const Neofetch = lazy(() => import('./components/channels/neofetch'));
+const Contact = lazy(() => import('./components/channels/contact'));
 
 function SideBar() {
   const [selectedChannel, setSelectedChannel] = useState('about');
@@ -44,7 +43,7 @@ function SideBar() {
   };
 
   return (
-    <div className='bg-bg_secondary w-screen h-screen'>
+    <div className='bg-bg_secondary w-screen h-screen overflow-hidden'>
     <div className="flex">
       <div className="fixed top-0 left-0 h-screen w-16 m-0 flex flex-col bg-background text-white shadow-lg">
         <SideBarIcon
@@ -52,6 +51,7 @@ function SideBar() {
           text="About Me"
           onClick={() => handleIconClick('about')}
         />
+        <div className="bg-gray-600 h-0.5 w-8/12 my-2 mx-auto rounded"></div>
         <SideBarIcon
           icon={<FaBlog size="28" />}
           text="Blog"
