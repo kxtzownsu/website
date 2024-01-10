@@ -10,14 +10,15 @@ const projectsData = [
   },
   {
     id: 2,
-    title: 'Project 2',
+    title: '',
     description: 'Description of Project 2',
     imageUrl: 'https://kxtz.dev/kxtz.png',
     url: 'https://example.com/project2',
   },
-  // Add more project data as needed
 ];
 
+
+// OH MY GOD WHAT THE FUCKING HELL IS THIS SHIT
 const Projects = () => {
   return (
     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
