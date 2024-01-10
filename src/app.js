@@ -1,3 +1,4 @@
+// GIVE ME REACT OR GIVE ME NOTHING
 import React, { useState, lazy, Suspense } from 'react';
 
 // Icons
@@ -13,25 +14,23 @@ const Neofetch = lazy(() => import('./components/channels/neofetch'));
 const Contact = lazy(() => import('./components/channels/contact'));
 
 
-
+// this entire thing is in 2 functions, this is shit
 function SideBar() {
   const [selectedChannel, setSelectedChannel] = useState('about');
   const [isContentVisible, setContentVisible] = useState(true);
 
   const handleIconClick = (channel) => {
-    // Start fade out transition
+    // Fade out the current "channel"
     setContentVisible(false);
 
-    // Set selected channel after a short delay to allow the fade out
     setTimeout(() => {
+      // Set the channel visible now, just for silly transitions :p
       setSelectedChannel(channel);
-      // Start fade in transition
       setContentVisible(true);
     }, 500);
   };
 
-  // useEffect (unchanged)
-
+  // RAHHHH CASE STATEMENTS GOOO
   const renderChannelComponent = () => {
     switch (selectedChannel) {
       case 'about':
@@ -45,7 +44,7 @@ function SideBar() {
       case 'contact':
         return <Contact />;
       default:
-        return <p>something shit itself</p>;
+        return <p>something shit itself, reload or contact me on Discord @kxtzownsu OR me@kxtz.dev</p>;
     }
   };
 
@@ -79,9 +78,9 @@ function SideBar() {
           text="Contact / Socials"
           onClick={() => handleIconClick('contact')}
         />
-          {/* Additional SidebarIcon components for other channels */}
         </div>
 
+        {/* This is probably normal React shit but it looks like hell */}
         <div className="flex-grow ml-16 p-4" style={{ transition: 'opacity 0.5s ease-in-out', opacity: isContentVisible ? 1 : 0 }}>
           <Suspense fallback={<div>Loading...</div>}>
             {renderChannelComponent()}
@@ -92,7 +91,7 @@ function SideBar() {
   );
 }
 
-
+// Give me my icon NOW
 function SideBarIcon({ icon, text = 'tt', onClick }) {
   return (
     <div className="sidebar-icon group" onClick={onClick}>
