@@ -1,6 +1,6 @@
 function Blog() {
     return (
-      <div className=" h-screen w-1/2 p-10">
+      <div className=" h-screen w-auto p-10">
         {/* First Blog Post */}
         <div className="border border-primary p-4 mb-4 text-center rounded">
           <h1 className="text-primary">First Blog</h1>

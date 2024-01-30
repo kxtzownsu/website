@@ -5,7 +5,7 @@ const projectsData = [
     id: 1,
     title: 'My Website',
     description: 'This is my website / portfolio written in ReactJS',
-    imageUrl: 'https://kxtz.dev/kxtz.png',
+    imageUrl: 'website.png',
     url: 'https://example.com/project1',
   },
   {
