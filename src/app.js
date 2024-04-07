@@ -1,7 +1,5 @@
 // GIVE ME REACT OR GIVE ME NOTHING
 import React, { useState, lazy, Suspense } from 'react';
-import Particles from 'react-particles-js';
-import particleConfig from './particles.json';
 
 // Icons
 import { IoPerson } from 'react-icons/io5';
@@ -51,17 +49,7 @@ function SideBar() {
   };
 
   return (
-    <div className='w-screen h-screen overflow-hidden'>
-    <Particles
-      params={particleConfig}
-      style={{
-        width: '100%',
-        height: '100%',
-        position: 'absolute',
-        top: 0,
-        left: 0,
-      }}
-    />
+    <div className='w-screen h-screen overflow-hidden bg-bg_secondary'>
       <div className="flex z-0">
         <div className="fixed top-0 left-0 h-screen w-16 m-0 flex flex-col bg-background text-white shadow-lg">
         <SideBarIcon
