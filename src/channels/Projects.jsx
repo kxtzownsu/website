@@ -7,14 +7,13 @@ const projectsData = [
     title: 'My Website',
     description: 'This is my website / portfolio written in ReactJS',
     imageUrl: 'img/proj-website.png',
-    url: 'https://example.com/project1',
+    url: 'https://kxtz.dev',
   },
   {
     id: 2,
     title: 'KVS',
     description: 'KVS: Kernel Version Switcher, made for unenrolled devices.',
     imageUrl: 'img/proj-kvs.png',
-    url: 'javascript:alert("kvs has been removed, check https://git.kxtz.dev/KVS");',
   },
 ];
 

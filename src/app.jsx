@@ -8,20 +8,19 @@ import { FaLaptop, FaBlog, FaLinux } from 'react-icons/fa';
 import { MdContactMail } from 'react-icons/md';
 
 // Pages / Channels
-//const AboutMe = lazy(() => import('./channels/AboutMe'));
 import { AboutMe } from './channels/AboutMe';
 import { Blog } from './channels/Blog';
 import { Projects } from './channels/Projects';
 import { Neofetch } from './channels/Neofetch';
 import { Contact } from './channels/Contact';
 
-export function Sidebar() {
+// this is the start of the main page, it isn't just the sidebar
+export function Website() {
   const [selectedChannel, setSelectedChannel] = useState('about');
   const [isContentVisible, setContentVisible] = useState(true);
 
   const handleIconClick = (channel) => {
-    // Fade out the current "channel"
-    setContentVisible(false);
+    setContentVisible(false); // fade effect
 
     setTimeout(() => {
       // Set the channel visible now, just for silly transitions :p
@@ -32,7 +31,7 @@ export function Sidebar() {
 
 
   // RAHHHH CASE STATEMENTS GOOO
-  const renderChannelComponent = () => {
+  const renderChannel = () => {
     switch (selectedChannel) {
       case 'about':
         return <AboutMe />;
@@ -81,10 +80,9 @@ export function Sidebar() {
         />
         </div>
 
-        {/* This is probably normal React shit but it looks like hell */}
         <div className="flex-grow ml-16 p-4" style={{ transition: 'opacity 0.5s ease-in-out', opacity: isContentVisible ? 1 : 0 }}>
           <Suspense fallback={<div>Loading...</div>}>
-            {renderChannelComponent()}
+            {renderChannel()}
           </Suspense>
         </div>
       </div>
