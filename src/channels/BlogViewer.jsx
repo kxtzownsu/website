@@ -1,8 +1,7 @@
-import React from 'react';
 import Markdown from 'react-markdown';
 import rehypeRaw from 'rehype-raw';
 
-function BlogViewer() {
+export function BlogViewer() {
   const markdown = `
   <!-- 
   Title: "KVS"
@@ -21,5 +20,3 @@ function BlogViewer() {
     </div>
   );
 }
-
-export default BlogViewer;

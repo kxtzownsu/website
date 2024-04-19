@@ -1,7 +1,6 @@
-import React, { lazy } from 'react';
-const BlogViewer = lazy(() => import('./BlogViewer'));
+import { BlogViewer } from './BlogViewer';
 
-function Blog() {
+export function Blog() {
     return (
         <div className="text-white flex flex-col items-center mx-auto pt-10">
             <h1 className="text-4xl">kxtz' shitty blog</h1>
@@ -10,5 +9,3 @@ function Blog() {
         </div>
     );
 };
-
-export default Blog;

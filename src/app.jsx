@@ -1,21 +1,21 @@
-// GIVE ME REACT OR GIVE ME NOTHING
-import React, { useState, lazy, Suspense } from 'react';
+ // erm... what the preact
+import { useState } from 'preact/hooks';
+import { Suspense, lazy } from 'preact/compat';
 
 // Icons
 import { IoPerson } from 'react-icons/io5';
 import { FaLaptop, FaBlog, FaLinux } from 'react-icons/fa';
 import { MdContactMail } from 'react-icons/md';
 
-// Channels
-const AboutMe = lazy(() => import('./components/channels/about'));
-const Blog = lazy(() => import('./components/channels/blog'));
-const Projects = lazy(() => import('./components/channels/projects'));
-const Neofetch = lazy(() => import('./components/channels/neofetch'));
-const Contact = lazy(() => import('./components/channels/contact'));
+// Pages / Channels
+//const AboutMe = lazy(() => import('./channels/AboutMe'));
+import { AboutMe } from './channels/AboutMe';
+import { Blog } from './channels/Blog';
+import { Projects } from './channels/Projects';
+import { Neofetch } from './channels/Neofetch';
+import { Contact } from './channels/Contact';
 
-
-// this entire thing is in 2 functions, this is shit
-function SideBar() {
+export function Sidebar() {
   const [selectedChannel, setSelectedChannel] = useState('about');
   const [isContentVisible, setContentVisible] = useState(true);
 
@@ -29,6 +29,7 @@ function SideBar() {
       setContentVisible(true);
     }, 500);
   };
+
 
   // RAHHHH CASE STATEMENTS GOOO
   const renderChannelComponent = () => {
@@ -89,9 +90,11 @@ function SideBar() {
       </div>
     </div>
   );
+
 }
 
-// Give me my icon NOW
+
+// Give me my icon NOW, but with Preact :3
 function SideBarIcon({ icon, text = 'tt', onClick }) {
   return (
     <div className="sidebar-icon group" onClick={onClick}>
@@ -103,5 +106,3 @@ function SideBarIcon({ icon, text = 'tt', onClick }) {
     </div>
   );
 }
-
-export default SideBar;
