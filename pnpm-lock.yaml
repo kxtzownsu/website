@@ -18,8 +18,8 @@ dependencies:
     specifier: ^3.5.1
     version: 3.5.1(preact-render-to-string@6.4.2)(preact@10.20.2)(typescript@5.4.5)
   react-icons:
-    specifier: ^5.1.0
-    version: 5.1.0(react@18.2.0)
+    specifier: ^5.2.1
+    version: 5.2.1(react@18.2.0)
   react-markdown:
     specifier: ^9.0.1
     version: 9.0.1(@types/react@18.2.79)(react@18.2.0)
@@ -8958,8 +8958,8 @@ packages:
       strip-json-comments: 2.0.1
     dev: false
 
-  /react-icons@5.1.0(react@18.2.0):
-    resolution: {integrity: sha512-D3zug1270S4hbSlIRJ0CUS97QE1yNNKDjzQe3HqY0aefp2CBn9VgzgES27sRR2gOvFK+0CNx/BW0ggOESp6fqQ==}
+  /react-icons@5.2.1(react@18.2.0):
+    resolution: {integrity: sha512-zdbW5GstTzXaVKvGSyTaBalt7HSfuK5ovrzlpyiWHAFXndXTdd/1hdDHI4xBM1Mn7YriT6aqESucFl9kEXzrdw==}
     peerDependencies:
       react: '*'
     dependencies:
