@@ -11,7 +11,7 @@
   "dependencies": {
     "autoprefixer": "^10.4.19",
     "postcss": "^8.4.38",
-    "preact": "^10.21.0",
+    "preact": "^10.23.0",
     "preact-cli": "^3.5.1",
     "react-icons": "^5.2.1",
     "react-markdown": "^9.0.1",
