@@ -34,8 +34,8 @@ importers:
         version: 3.4.9
     devDependencies:
       '@preact/preset-vite':
-        specifier: ^2.9.0
-        version: 2.9.0(@babel/core@7.24.4)(preact@10.23.1)(vite@5.4.2(@types/node@20.12.7)(terser@5.30.3))
+        specifier: ^2.9.2
+        version: 2.9.2(@babel/core@7.24.4)(preact@10.23.1)(vite@5.4.2(@types/node@20.12.7)(terser@5.30.3))
       vite:
         specifier: ^5.4.2
         version: 5.4.2(@types/node@20.12.7)(terser@5.30.3)
@@ -906,11 +906,11 @@ packages:
     peerDependencies:
       preact: '>= 10.0.0'
 
-  '@preact/preset-vite@2.9.0':
-    resolution: {integrity: sha512-B9yVT7AkR6owrt84K3pLNyaKSvlioKdw65VqE/zMiR6HMovPekpsrwBNs5DJhBFEd5cvLMtCjHNHZ9P7Oblveg==}
+  '@preact/preset-vite@2.9.2':
+    resolution: {integrity: sha512-Gtp0pPd4s/bZiPAvn4Lhd/on5YZXd/AaXoO03MMtLTmH7nsH3BuXFZnBqvXpqozBDthjxwDWwGEJcf129ctY+g==}
     peerDependencies:
       '@babel/core': 7.x
-      vite: 2.x || 3.x || 4.x || 5.x
+      vite: 2.x || 3.x || 4.x || 5.x || 6.x
 
   '@prefresh/babel-plugin@0.4.4':
     resolution: {integrity: sha512-/EvgIFMDL+nd20WNvMO0JQnzIl1EJPgmSaSYrZUww7A+aSdKsi37aL07TljrZR1cBMuzFxcr4xvqsUQLFJEukw==}
@@ -2667,7 +2667,7 @@ packages:
     resolution: {integrity: sha512-oWb1Z6mkHIskLzEJ/XWX0srkpkTQ7vaopMQkyaEIoq0fmtFVxOthb8cCxeT+p3ynTdkk/RZwbgG4brR5BeWECw==}
     engines: {node: '>= 4.0'}
     os: [darwin]
-    deprecated: The v1 package contains DANGEROUS / INSECURE binaries. Upgrade to safe fsevents v2
+    deprecated: Upgrade to fsevents v2 to mitigate potential security issues
 
   fsevents@2.3.3:
     resolution: {integrity: sha512-5xoDfX+fL7faATnagmWPpbFtwh/R77WmMMqqHGS65C3vvB0YHrgF+B1YmZ3441tMj5n63k0212XNoJwzlhffQw==}
@@ -6955,7 +6955,7 @@ snapshots:
       loader-utils: 2.0.4
       preact: 10.23.1
 
-  '@preact/preset-vite@2.9.0(@babel/core@7.24.4)(preact@10.23.1)(vite@5.4.2(@types/node@20.12.7)(terser@5.30.3))':
+  '@preact/preset-vite@2.9.2(@babel/core@7.24.4)(preact@10.23.1)(vite@5.4.2(@types/node@20.12.7)(terser@5.30.3))':
     dependencies:
       '@babel/code-frame': 7.24.2
       '@babel/core': 7.24.4
@@ -6968,7 +6968,6 @@ snapshots:
       kolorist: 1.8.0
       magic-string: 0.30.5
       node-html-parser: 6.1.13
-      resolve: 1.22.8
       source-map: 0.7.4
       stack-trace: 1.0.0-pre2
       vite: 5.4.2(@types/node@20.12.7)(terser@5.30.3)
