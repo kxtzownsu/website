@@ -14,12 +14,11 @@ const projectsData = [
     title: 'KVS',
     description: 'KVS: Kernel Version Switcher, made for unenrolled devices.',
     imageUrl: 'img/proj-kvs.png',
+    url: 'https://kvs.kxtz.dev',
   },
 ];
 
 
-// OH MY GOD WHAT THE FUCKING HELL IS THIS SHIT
-// IT LOOKS UGLY BUT I KNOW ITS NORMAL :sob:
 export function Projects(){
   return (
     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
